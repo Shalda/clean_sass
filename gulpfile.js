@@ -22,10 +22,9 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(browserSync.stream())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/css'));
-
+        .pipe(gulp.dest('./public/css'))
+        .pipe(browserSync.stream());
 });
 
             //browser-sync
@@ -36,7 +35,7 @@ gulp.task('browser-sync', function () {
         }
     });
     gulp.watch('./frontend/stylesheets/**/*.scss', ['sass']);
-    gulp.watch("./public/*.html").on('change', browserSync.reload);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
             //font: watch/build/
 gulp.task('font:watch', ['font:build'], function () {
@@ -88,4 +87,11 @@ gulp.task('main-js', function () {
     return gulp.src(mainBowerFiles('**/*.js'))
         .pipe(gulp.dest('./public/js'));
 });
-gulp.task('default', ['browser-sync', 'sass', 'font:watch', 'image:watch', 'main-css', 'main-js', 'js:watch']);
+gulp.task('default', [
+    'browser-sync',
+    'sass',
+    'font:watch',
+    'image:watch',
+    'main-css',
+    'main-js',
+    'js:watch']);
