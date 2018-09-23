@@ -35,6 +35,7 @@ gulp.task('browser-sync', function () {
         }
     });
     gulp.watch('./frontend/stylesheets/**/*.scss', ['sass']);
+    gulp.watch("./public/js/*.js").on('change', browserSync.reload);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
             //font: watch/build/

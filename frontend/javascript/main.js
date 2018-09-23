@@ -4,5 +4,5 @@ requirejs.config({
 
 define(["jquery", "domReady"], function($) {
     "use strict";
-
+    console.log('hello');
 });
