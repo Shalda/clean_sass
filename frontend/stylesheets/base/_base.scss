@@ -1,4 +1,13 @@
 body {
-  margin: 0;
-  padding: 0;
+  .wrapper{
+    position: relative;
+  }
+  a{
+    text-decoration: none;
+  }
+  font-family: 'Avenir', SansSerif;
+  color: $textLight;
+  font-size: 18px;
+  background-color: $bgDark;
+
 }

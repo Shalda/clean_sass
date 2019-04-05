@@ -1,10 +1,11 @@
 
 
 // Default global colors
-$bgGrey: #e8ebf1;
-$bgBody: #fff;
+$bgLight: #FFFFFF;
+$bgDark: #4D4D4D;
 $bghover: #2aacc8;
-$colortext: #363636;
+$textDark:  #4D4D4D;
+$textLight:  #FFFFFF;
 
 
 
@@ -18,7 +19,11 @@ $tablet: 950;
 $mobile: 640;
 
 // Fonts
-$family: Arial, Helvetica, sans-serif;
+
+$family: 'Avenir',Arial, Helvetica, sans-serif;
+$familyBold: 'Avenir Bold',Arial, Helvetica, sans-serif;
+$familyLight: 'Avenir Light',Arial, Helvetica, sans-serif;
+$familyDemi: 'Avenir Demi',Arial, Helvetica, sans-serif;
 $_16px: 0.875em;
 
 //Images

@@ -1,0 +1,103 @@
+header {
+  background-color: $bgLight;
+}
+
+.navbar {
+  margin-left: 30px;
+  .navbar_wrapper {
+    color: $textDark;
+    margin: auto;
+    max-width: 1740px;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    .navbar_elem {
+      align-self: center;
+    }
+    .navbar_logo {
+      flex-basis: 18.6%;
+      font-family: 'Manrope Bold', Arial, SansSerif;
+      font-size: 27px;
+      line-height: 31px;
+      //margin-right: 9.3vw;
+    }
+    a {
+      color: $textDark;
+
+    }
+    .navbar_menu {
+      font-family: $familyDemi;
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 50%;
+      //margin-right: 9vw;
+      a {
+        //margin-right: 4.12vw;
+      }
+    }
+    .navbar_phone {
+      flex-basis: 16%;
+      //margin-right: 3.5vw;
+    }
+    .navbar_cart {
+      //margin-right: 7vw;
+    }
+  }
+  #nav-menu {
+    position: absolute;
+    width: 100%;
+    left: -200%;
+    top: 85px;
+    background-color: #fff;
+
+    transition: left 0.5s ease-in-out;
+    &.open{
+      left: 0;
+    }
+    .nav_menu_wrap {
+      margin: auto;
+      max-width: 1770px;
+      display: flex;
+      .nav_menu_left a {
+        font-family: $familyLight;
+        font-size: 27px;
+        text-transform: uppercase;
+        padding-bottom: 4vh;
+        transition:  0.1s font-weight ease-in-out;
+      }
+      .nav_menu_left a:hover{
+        font-weight: 600;
+
+      }
+      .nav_menu_left, .nav_menu_right {
+        padding: 11vh 0 7vh;
+        font-family: $familyLight;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 50%;
+      }
+      .nav_menu_left:after{
+        position: absolute;
+        content: '';
+        border-right: 2px #919191 solid;
+        right: 0;
+        bottom: 20%;
+        height: 60%  ;
+      }
+      .menu_right_text{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+      .open{
+        display: flex;
+      }
+        .menu_right_text{
+      }
+
+    }
+  }
+}
